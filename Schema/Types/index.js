@@ -1,6 +1,6 @@
 import { GraphQLObjectType, GraphQLString } from "graphql";
 
-const PersonType = new GraphQLObjectType({
+const TypePerson = new GraphQLObjectType({
   name: "Person",
   description: "A person object in Star Wars",
   fields: () => ({
@@ -27,4 +27,4 @@ const PersonType = new GraphQLObjectType({
   }),
 });
 
-export default PersonType;
+export default TypePerson;
