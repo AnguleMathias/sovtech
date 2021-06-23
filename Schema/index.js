@@ -6,8 +6,8 @@ import {
 } from "graphql";
 import fetch from "node-fetch";
 
-import TypePerson from "./Types";
-import BASE_URL from "../Constants";
+import TypePerson from "./Types/index.js";
+import { BASE_URL } from "../Constants/index.js";
 
 const QueryType = new GraphQLObjectType({
   name: "Query",
