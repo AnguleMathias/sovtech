@@ -28,6 +28,21 @@ const QueryType = new GraphQLObjectType({
             return data.results;
           }),
     },
+    Person: {
+      type: TypePerson,
+      description: "Given name search for a star wars character",
+      args: {
+        name: {
+          type: GraphQLString,
+        },
+      },
+      resolve: (root, args) =>
+        fetch(`${BASE_URL}/people/?search=${args.name}`)
+          .then((response) => response.json())
+          .then((data) => {
+            return data.results[0];
+          }),
+    },
   }),
 });
 
